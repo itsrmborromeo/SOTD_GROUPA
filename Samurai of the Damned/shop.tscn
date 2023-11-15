@@ -1,0 +1,138 @@
+[gd_scene load_steps=10 format=3 uid="uid://c268xrucosl7l"]
+
+[ext_resource type="Texture2D" uid="uid://cvenjm2rx8sfd" path="res://assets/art/decorations/shop_anim.png" id="1_gaevk"]
+
+[sub_resource type="Animation" id="Animation_3l62x"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_gaevk")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [6]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_g3sm3"]
+resource_name = "shop"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_gaevk")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [6]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_s2d3j"]
+_data = {
+"RESET": SubResource("Animation_3l62x"),
+"shop": SubResource("Animation_g3sm3")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1v0li"]
+radius = 63.6318
+
+[sub_resource type="Gradient" id="Gradient_eiqch"]
+offsets = PackedFloat32Array(0, 0.84472)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_31ywt"]
+gradient = SubResource("Gradient_eiqch")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="Gradient" id="Gradient_iwf1b"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_tnyue"]
+gradient = SubResource("Gradient_iwf1b")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[node name="shop" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.9, 2.2)
+texture = ExtResource("1_gaevk")
+hframes = 6
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+autoplay = "shop"
+libraries = {
+"": SubResource("AnimationLibrary_s2d3j")
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1, 0.5)
+shape = SubResource("CircleShape2D_1v0li")
+one_way_collision = true
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(96, 96)
+color = Color(0.996078, 0.807843, 0.415686, 1)
+energy = 1.6
+texture = SubResource("GradientTexture2D_31ywt")
+
+[node name="PointLight2D2" type="PointLight2D" parent="."]
+position = Vector2(-96, 96)
+color = Color(0.996078, 0.815686, 0.329412, 1)
+energy = 1.6
+texture = SubResource("GradientTexture2D_tnyue")
