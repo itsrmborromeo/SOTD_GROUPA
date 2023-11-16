@@ -1,0 +1,84 @@
+[gd_scene load_steps=12 format=3 uid="uid://cmiwg7ljwutmg"]
+
+[ext_resource type="Texture2D" uid="uid://lelxuk0hdmtl" path="res://assets/mobs/Black_Werewolf/Idle.png" id="1_mm6mh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ymmfv"]
+atlas = ExtResource("1_mm6mh")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sxean"]
+atlas = ExtResource("1_mm6mh")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nahyp"]
+atlas = ExtResource("1_mm6mh")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d5gj2"]
+atlas = ExtResource("1_mm6mh")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gcrx1"]
+atlas = ExtResource("1_mm6mh")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tachc"]
+atlas = ExtResource("1_mm6mh")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8howe"]
+atlas = ExtResource("1_mm6mh")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6jxqd"]
+atlas = ExtResource("1_mm6mh")
+region = Rect2(896, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w0mna"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ymmfv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sxean")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nahyp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d5gj2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gcrx1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tachc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8howe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6jxqd")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kmglv"]
+radius = 21.0
+height = 58.0
+
+[node name="BlackWolf" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-12, -35)
+sprite_frames = SubResource("SpriteFrames_w0mna")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.355143
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_kmglv")
+disabled = true
