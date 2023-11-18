@@ -399,6 +399,6 @@ z_as_relative = false
 y_sort_enabled = true
 position = Vector2(-64, -96)
 sprite_frames = SubResource("SpriteFrames_vi5h0")
-animation = &"jump"
+animation = &"attack_3"
 autoplay = "idle"
 centered = false
