@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dtn3xdom7tglm"
-path="res://.godot/imported/Attack_2.png-78188293ba1ec87d628be4a68fe6ad08.ctex"
+path="res://.godot/imported/Attack_2.png-c509ddd1d56b7d6173f727cf77ee9c0d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/mobs/Red_Werewolf/Attack_2.png"
-dest_files=["res://.godot/imported/Attack_2.png-78188293ba1ec87d628be4a68fe6ad08.ctex"]
+source_file="res://assets/mobs/Red_Werewolf/Attack_2.png"
+dest_files=["res://.godot/imported/Attack_2.png-c509ddd1d56b7d6173f727cf77ee9c0d.ctex"]
 
 [params]
 

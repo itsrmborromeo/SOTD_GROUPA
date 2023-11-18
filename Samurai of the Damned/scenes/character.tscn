@@ -1,6 +1,6 @@
 [gd_scene load_steps=89 format=3 uid="uid://btbckux2gqeru"]
 
-[ext_resource type="Script" path="res://character.gd" id="1_asnim"]
+[ext_resource type="Script" path="res://script/character.gd" id="1_jmsht"]
 [ext_resource type="Texture2D" uid="uid://c5h636nq7madp" path="res://assets/art/rvs/maincharacter/attack_1/attack1.png" id="2_2lo4i"]
 [ext_resource type="Texture2D" uid="uid://b3vrcx7axogup" path="res://assets/art/rvs/maincharacter/idle/idle1.png" id="2_y8awg"]
 [ext_resource type="Texture2D" uid="uid://cnytp7ftryduo" path="res://assets/art/rvs/maincharacter/idle/idle2.png" id="3_b43vi"]
@@ -394,7 +394,7 @@ animations = [{
 
 [node name="character" type="CharacterBody2D"]
 position = Vector2(1, 0)
-script = ExtResource("1_asnim")
+script = ExtResource("1_jmsht")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_g0eqg")

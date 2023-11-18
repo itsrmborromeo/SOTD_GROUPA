@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://jk1v3tem8m2b"
-path="res://.godot/imported/Hurt.png-234b22d4d806693f2db5cd15542bb4de.ctex"
+path="res://.godot/imported/Hurt.png-cd11d3ce243799d778ca104d544535f0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/mobs/White_Werewolf/Hurt.png"
-dest_files=["res://.godot/imported/Hurt.png-234b22d4d806693f2db5cd15542bb4de.ctex"]
+source_file="res://assets/mobs/White_Werewolf/Hurt.png"
+dest_files=["res://.godot/imported/Hurt.png-cd11d3ce243799d778ca104d544535f0.ctex"]
 
 [params]
 

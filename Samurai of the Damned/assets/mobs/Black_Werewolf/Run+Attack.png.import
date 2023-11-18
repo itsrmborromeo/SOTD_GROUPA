@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cua7rg6bmrdwr"
-path="res://.godot/imported/Run+Attack.png-e32e85b8ef168a079812ab74e7227571.ctex"
+path="res://.godot/imported/Run+Attack.png-8535e1ed898fb15d94962f01cf1d0c11.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/mobs/Black_Werewolf/Run+Attack.png"
-dest_files=["res://.godot/imported/Run+Attack.png-e32e85b8ef168a079812ab74e7227571.ctex"]
+source_file="res://assets/mobs/Black_Werewolf/Run+Attack.png"
+dest_files=["res://.godot/imported/Run+Attack.png-8535e1ed898fb15d94962f01cf1d0c11.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cr00i64r0bhjr"
-path="res://.godot/imported/Idle.png-1d3a3e04c82df937fd8aa8be2ab1779d.ctex"
+path="res://.godot/imported/Idle.png-51bc8633a2f53898e2fb5e198684d7dc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/mobs/skeleton_spearman/Idle.png"
-dest_files=["res://.godot/imported/Idle.png-1d3a3e04c82df937fd8aa8be2ab1779d.ctex"]
+source_file="res://assets/mobs/skeleton_spearman/Idle.png"
+dest_files=["res://.godot/imported/Idle.png-51bc8633a2f53898e2fb5e198684d7dc.ctex"]
 
 [params]
 
