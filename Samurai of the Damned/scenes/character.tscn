@@ -45,8 +45,8 @@
 [ext_resource type="Texture2D" uid="uid://d4mkt2d67ygpa" path="res://assets/art/maincharacter/walk/walk9.png" id="43_c0sdh"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g0eqg"]
-radius = 6.0
-height = 64.0
+radius = 15.0
+height = 106.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lbqg0"]
 atlas = ExtResource("2_bhlde")
@@ -397,8 +397,9 @@ shape = SubResource("CapsuleShape2D_g0eqg")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 z_as_relative = false
 y_sort_enabled = true
-position = Vector2(-64, -96)
+position = Vector2(-99, -140)
+scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_vi5h0")
-animation = &"attack_3"
+animation = &"idle"
 autoplay = "idle"
 centered = false
