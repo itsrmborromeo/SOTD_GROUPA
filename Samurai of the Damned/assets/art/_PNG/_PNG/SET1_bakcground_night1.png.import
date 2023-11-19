@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqip8oyhtp087"
-path="res://.godot/imported/cobs.png-a24d05d71e3b03dce670ea3e584a9878.ctex"
+uid="uid://bg63pkutretbc"
+path="res://.godot/imported/SET1_bakcground_night1.png-2fa5c5cba0c508cd3b4b6610be1a96ba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/decorations/cobs.png"
-dest_files=["res://.godot/imported/cobs.png-a24d05d71e3b03dce670ea3e584a9878.ctex"]
+source_file="res://assets/art/_PNG/_PNG/SET1_bakcground_night1.png"
+dest_files=["res://.godot/imported/SET1_bakcground_night1.png-2fa5c5cba0c508cd3b4b6610be1a96ba.ctex"]
 
 [params]
 

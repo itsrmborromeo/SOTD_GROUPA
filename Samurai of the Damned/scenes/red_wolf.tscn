@@ -531,6 +531,7 @@ sprite_frames = SubResource("SpriteFrames_mnjwu")
 animation = &"walk"
 autoplay = "run"
 frame_progress = 0.953123
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_sig6j")
