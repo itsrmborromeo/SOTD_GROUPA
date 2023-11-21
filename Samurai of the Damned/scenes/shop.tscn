@@ -61,6 +61,7 @@ colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_31ywt"]
 gradient = SubResource("Gradient_eiqch")
+use_hdr = true
 fill = 1
 fill_from = Vector2(0.5, 0.5)
 
@@ -69,6 +70,7 @@ colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_tnyue"]
 gradient = SubResource("Gradient_iwf1b")
+use_hdr = true
 fill = 1
 fill_from = Vector2(0.5, 0.5)
 
@@ -89,11 +91,11 @@ one_way_collision = true
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(96, 96)
 color = Color(0.996078, 0.807843, 0.415686, 1)
-energy = 1.6
+energy = 1.9
 texture = SubResource("GradientTexture2D_31ywt")
 
 [node name="PointLight2D2" type="PointLight2D" parent="."]
 position = Vector2(-96, 96)
 color = Color(0.996078, 0.815686, 0.329412, 1)
-energy = 1.6
+energy = 1.9
 texture = SubResource("GradientTexture2D_tnyue")
