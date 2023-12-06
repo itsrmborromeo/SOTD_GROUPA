@@ -36,3 +36,4 @@ func _physics_process(delta):
 		sprite.flip_h = (direction == -1)
 
 	move_and_slide()
+

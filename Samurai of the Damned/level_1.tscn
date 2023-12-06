@@ -4,13 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://bq3wx665cuk3o" path="res://assets/art/tilemaps/groundTilemap_64px.png" id="2_rs7jm"]
 [ext_resource type="PackedScene" uid="uid://btbckux2gqeru" path="res://character.tscn" id="3_bfd0m"]
 [ext_resource type="Texture2D" uid="uid://b5ifjde8hkpny" path="res://assets/art/tilemaps/tilesetOpenGame.png" id="3_edduk"]
-[ext_resource type="Texture2D" uid="uid://dewrdktgob288" path="res://assets/art/redforest_bg/parallax-demon-woods-bg.png" id="5_js4x8"]
-[ext_resource type="Texture2D" uid="uid://bvunqg6astfqs" path="res://assets/art/redforest_bg/parallax-demon-woods-close-trees.png" id="6_136et"]
-[ext_resource type="Texture2D" uid="uid://w0v41l3t2fth" path="res://assets/art/redforest_bg/parallax-demon-woods-far-trees.png" id="7_0u2qw"]
-[ext_resource type="Texture2D" uid="uid://brp5jkjuarkba" path="res://assets/art/redforest_bg/parallax-demon-woods-mid-trees.png" id="8_kk614"]
-[ext_resource type="Texture2D" uid="uid://b17ypn4rwnup2" path="res://assets/art/decorations/rock_1.png" id="9_p6ejf"]
-[ext_resource type="Texture2D" uid="uid://bacjnpyndxy4b" path="res://assets/art/decorations/rock_2.png" id="10_punjg"]
-[ext_resource type="Texture2D" uid="uid://cw0gd4h82axpu" path="res://assets/art/decorations/rock_3.png" id="11_cb6iw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xf58p"]
 texture = ExtResource("2_rs7jm")
@@ -502,6 +495,27 @@ physics_layer_0/collision_layer = 1
 sources/23 = SubResource("TileSetAtlasSource_xf58p")
 sources/24 = SubResource("TileSetAtlasSource_nkka7")
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gk5yn"]
+load_path = "res://.godot/imported/parallax-demon-woods-bg.png-babf941fa9e8c151fb20a44b394e9e1a.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_66hcp"]
+load_path = "res://.godot/imported/parallax-demon-woods-close-trees.png-d4230725f08f0b11e1e49d755f2530be.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kmsf6"]
+load_path = "res://.godot/imported/parallax-demon-woods-far-trees.png-0affb8a0366768a54bb368143ac5a647.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6wv1u"]
+load_path = "res://.godot/imported/parallax-demon-woods-mid-trees.png-ffc29617c4f9f9247667ea2d4a4d8f9f.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_twqyv"]
+load_path = "res://.godot/imported/rock_1.png-9551a321df848cc60bf98db6eddaeb7c.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ychw2"]
+load_path = "res://.godot/imported/rock_2.png-0db9ecf4efbaad29fe6dd9ad6a09fd47.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ap31s"]
+load_path = "res://.godot/imported/rock_3.png-ade84a8be647236228b14b4d47a2f009.ctex"
+
 [node name="level1" type="Node2D"]
 metadata/_edit_horizontal_guides_ = [-576.0]
 metadata/_edit_vertical_guides_ = []
@@ -540,7 +554,7 @@ motion_mirroring = Vector2(480, 0)
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground"]
 position = Vector2(524.8, 298.099)
 scale = Vector2(2.15557, 2.23518)
-texture = ExtResource("5_js4x8")
+texture = SubResource("CompressedTexture2D_gk5yn")
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
 position = Vector2(1.52588e-05, -288)
@@ -551,7 +565,7 @@ motion_mirroring = Vector2(480, 0)
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
 position = Vector2(284.381, 289.524)
 scale = Vector2(1.01223, 1.12045)
-texture = ExtResource("6_136et")
+texture = SubResource("CompressedTexture2D_66hcp")
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
 position = Vector2(-160, -288)
@@ -562,7 +576,7 @@ motion_mirroring = Vector2(480, 0)
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
 position = Vector2(350.476, 289.524)
 scale = Vector2(1.04054, 1.12045)
-texture = ExtResource("7_0u2qw")
+texture = SubResource("CompressedTexture2D_kmsf6")
 
 [node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
 position = Vector2(-32, -480)
@@ -574,50 +588,50 @@ metadata/_edit_group_ = true
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
 position = Vector2(289.524, 380.952)
 scale = Vector2(1.02109, 1.18207)
-texture = ExtResource("8_kk614")
+texture = SubResource("CompressedTexture2D_6wv1u")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="Rock1" type="Sprite2D" parent="."]
 position = Vector2(576, 576)
-texture = ExtResource("9_p6ejf")
+texture = SubResource("CompressedTexture2D_twqyv")
 
 [node name="Rock2" type="Sprite2D" parent="."]
 position = Vector2(896, 576)
-texture = ExtResource("10_punjg")
+texture = SubResource("CompressedTexture2D_ychw2")
 
 [node name="Rock3" type="Sprite2D" parent="."]
 position = Vector2(5056, 576)
-texture = ExtResource("10_punjg")
+texture = SubResource("CompressedTexture2D_ychw2")
 
 [node name="Rock4" type="Sprite2D" parent="."]
 position = Vector2(5088, 640)
-texture = ExtResource("11_cb6iw")
+texture = SubResource("CompressedTexture2D_ap31s")
 
 [node name="Rock5" type="Sprite2D" parent="."]
 position = Vector2(6368, 544)
-texture = ExtResource("10_punjg")
+texture = SubResource("CompressedTexture2D_ychw2")
 
 [node name="Rock6" type="Sprite2D" parent="."]
 position = Vector2(7584, 416)
-texture = ExtResource("9_p6ejf")
+texture = SubResource("CompressedTexture2D_twqyv")
 
 [node name="Rock7" type="Sprite2D" parent="."]
 position = Vector2(7680, 416)
-texture = ExtResource("11_cb6iw")
+texture = SubResource("CompressedTexture2D_ap31s")
 
 [node name="Rock8" type="Sprite2D" parent="."]
 position = Vector2(8768, 352)
-texture = ExtResource("9_p6ejf")
+texture = SubResource("CompressedTexture2D_twqyv")
 
 [node name="Rock9" type="Sprite2D" parent="."]
 position = Vector2(8864, 352)
-texture = ExtResource("10_punjg")
+texture = SubResource("CompressedTexture2D_ychw2")
 
 [node name="Rock10" type="Sprite2D" parent="."]
 position = Vector2(8992, 352)
-texture = ExtResource("11_cb6iw")
+texture = SubResource("CompressedTexture2D_ap31s")
 
 [node name="Rock11" type="Sprite2D" parent="."]
 position = Vector2(4032, 576)
-texture = ExtResource("10_punjg")
+texture = SubResource("CompressedTexture2D_ychw2")
