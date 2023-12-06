@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dftowodp1ja7k"
-path="res://.godot/imported/Run.png-4fb934fe63a0103a1b22c81038ddc65c.ctex"
+uid="uid://byo8u1wigw8j6"
+path="res://.godot/imported/SKY DESIGN LEVEL 2.png-57f42da3952bbf5152f992f1eb5021ab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/maincharacter/Sprites/Run.png"
-dest_files=["res://.godot/imported/Run.png-4fb934fe63a0103a1b22c81038ddc65c.ctex"]
+source_file="res://assets/art/Background/SKY DESIGN LEVEL 2.png"
+dest_files=["res://.godot/imported/SKY DESIGN LEVEL 2.png-57f42da3952bbf5152f992f1eb5021ab.ctex"]
 
 [params]
 

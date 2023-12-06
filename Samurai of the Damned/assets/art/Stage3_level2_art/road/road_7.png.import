@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dftowodp1ja7k"
-path="res://.godot/imported/Run.png-4fb934fe63a0103a1b22c81038ddc65c.ctex"
+uid="uid://c5smv4vp08cdu"
+path="res://.godot/imported/road_7.png-b7974a8db204aedda126d79e83881bed.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/maincharacter/Sprites/Run.png"
-dest_files=["res://.godot/imported/Run.png-4fb934fe63a0103a1b22c81038ddc65c.ctex"]
+source_file="res://assets/art/Stage3_level2_art/road/road_7.png"
+dest_files=["res://.godot/imported/road_7.png-b7974a8db204aedda126d79e83881bed.ctex"]
 
 [params]
 

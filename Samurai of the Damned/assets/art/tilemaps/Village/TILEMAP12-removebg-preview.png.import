@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dftowodp1ja7k"
-path="res://.godot/imported/Run.png-4fb934fe63a0103a1b22c81038ddc65c.ctex"
+uid="uid://cnrj0uu73bg4d"
+path="res://.godot/imported/TILEMAP12-removebg-preview.png-037a8e71a8028d9ed00cb11ab22d6f70.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/maincharacter/Sprites/Run.png"
-dest_files=["res://.godot/imported/Run.png-4fb934fe63a0103a1b22c81038ddc65c.ctex"]
+source_file="res://assets/art/tilemaps/Village/TILEMAP12-removebg-preview.png"
+dest_files=["res://.godot/imported/TILEMAP12-removebg-preview.png-037a8e71a8028d9ed00cb11ab22d6f70.ctex"]
 
 [params]
 

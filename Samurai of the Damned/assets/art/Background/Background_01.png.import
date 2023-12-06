@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dftowodp1ja7k"
-path="res://.godot/imported/Run.png-4fb934fe63a0103a1b22c81038ddc65c.ctex"
+uid="uid://cio1jhxj486bu"
+path="res://.godot/imported/Background_01.png-93b488b93d2f76f24b35fa199649e30b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/maincharacter/Sprites/Run.png"
-dest_files=["res://.godot/imported/Run.png-4fb934fe63a0103a1b22c81038ddc65c.ctex"]
+source_file="res://assets/art/Background/Background_01.png"
+dest_files=["res://.godot/imported/Background_01.png-93b488b93d2f76f24b35fa199649e30b.ctex"]
 
 [params]
 
