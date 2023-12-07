@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://icg3664pcm81" path="res://assets/art/tilemaps/Village/TILEMAP2-removebg-preview (1).png" id="6_5pl5s"]
 [ext_resource type="Texture2D" uid="uid://cc7d5sjofrol4" path="res://assets/art/tilemaps/Village/TILEMAP3-removebg-preview.png" id="7_h21s5"]
 [ext_resource type="Texture2D" uid="uid://bnhfas61fw6f3" path="res://assets/art/tilemaps/Village/TILEMAP4-removebg-preview.png" id="8_1thxj"]
-[ext_resource type="Texture2D" uid="uid://vj3xys25o2un" path="res://assets/art/tilemaps/Village/TILEMAP1-removebg-preview.png" id="9_yufm6"]
+[ext_resource type="Texture2D" uid="uid://dkjdq6fmqwpdb" path="res://assets/art/tilemaps/Village/TILEMAP1-removebg-preview.png" id="9_yufm6"]
 [ext_resource type="Texture2D" uid="uid://cbyjv5iewvfgp" path="res://assets/art/tilemaps/Village/TILEMAP5-removebg-preview.png" id="10_ki4rv"]
 [ext_resource type="Texture2D" uid="uid://dh6cvpaali21d" path="res://assets/art/tilemaps/Village/TILEMAP6-removebg-preview.png" id="11_5epdm"]
 [ext_resource type="Texture2D" uid="uid://durciy7dod8qx" path="res://assets/art/tilemaps/Village/TILEMAP7-removebg-preview.png" id="12_oitjc"]
@@ -13,12 +13,11 @@
 [ext_resource type="Texture2D" uid="uid://c72grksomnvau" path="res://assets/art/tilemaps/Village/TILEMAP11-removebg-preview.png" id="17_5ss41"]
 [ext_resource type="Texture2D" uid="uid://cnrj0uu73bg4d" path="res://assets/art/tilemaps/Village/TILEMAP12-removebg-preview.png" id="18_nf4cw"]
 [ext_resource type="Texture2D" uid="uid://b818g688es0rk" path="res://assets/art/tilemaps/Village/TILEMAP14-removebg-preview.png" id="19_b5hrv"]
-[ext_resource type="PackedScene" uid="uid://btbckux2gqeru" path="res://character.tscn" id="27_5o343"]
+[ext_resource type="PackedScene" uid="uid://btbckux2gqeru" path="res://scenes/character.tscn" id="27_5o343"]
 [ext_resource type="Texture2D" uid="uid://byo8u1wigw8j6" path="res://assets/art/Background/SKY DESIGN LEVEL 2.png" id="28_l6nxe"]
 [ext_resource type="Texture2D" uid="uid://qgf6yidv7mba" path="res://assets/art/Background/Background_02.png" id="29_ie6w2"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vrhum"]
-load_path = "res://.godot/imported/Ground_01.png-3988f58032e58a7156d5bcbe3bd69508.ctex"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1ygwp"]
 texture = SubResource("CompressedTexture2D_vrhum")
@@ -189,7 +188,6 @@ texture = SubResource("CompressedTexture2D_vrhum")
 7:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3qv4y"]
-load_path = "res://.godot/imported/Ground_02.png-9ce242baee6b835b3b8cc6a05cd1e875.ctex"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_528jw"]
 texture = SubResource("CompressedTexture2D_3qv4y")
@@ -451,7 +449,6 @@ texture = SubResource("CompressedTexture2D_3qv4y")
 7:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kmeob"]
-load_path = "res://.godot/imported/Ground_11.png-fb355382813c7880b95ed3cc20459f89.ctex"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qw5sx"]
 texture = SubResource("CompressedTexture2D_kmeob")
@@ -713,7 +710,6 @@ texture = SubResource("CompressedTexture2D_kmeob")
 7:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 0.5625, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4hsy1"]
-load_path = "res://.godot/imported/Ground_12.png-af4db2525bbbf937e2d1ac304341e364.ctex"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5rloc"]
 texture = SubResource("CompressedTexture2D_4hsy1")
@@ -975,7 +971,6 @@ texture = SubResource("CompressedTexture2D_4hsy1")
 7:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 0.5625, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3vsh2"]
-load_path = "res://.godot/imported/Ground_13.png-203029ab82c7ef9ed43e65775ecbfef5.ctex"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8o4yr"]
 texture = SubResource("CompressedTexture2D_3vsh2")
@@ -9482,7 +9477,6 @@ texture_region_size = Vector2i(16, 18)
 28:13/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_tpdow"]
-load_path = "res://.godot/imported/Ground_03.png-e00e56328c72b23f5644b2c2808e26d2.ctex"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3hhqf"]
 texture = SubResource("CompressedTexture2D_tpdow")
@@ -18718,7 +18712,6 @@ texture = ExtResource("19_b5hrv")
 59:15/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wkygr"]
-load_path = "res://.godot/imported/Ground_04.png-70bcac2cfb02ae5baed0e33e1d767d60.ctex"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7bslp"]
 texture = SubResource("CompressedTexture2D_wkygr")
@@ -18960,7 +18953,6 @@ texture = SubResource("CompressedTexture2D_wkygr")
 1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 0.5625, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1y33i"]
-load_path = "res://.godot/imported/Ground_05.png-571e2e43617976ce2e80d94f55c16c5d.ctex"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j16md"]
 texture = SubResource("CompressedTexture2D_1y33i")
@@ -19222,7 +19214,6 @@ texture = SubResource("CompressedTexture2D_1y33i")
 7:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 0.5625, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hgo6h"]
-load_path = "res://.godot/imported/Ground_06.png-5ecea2354203e1da037207362e658017.ctex"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ghmwb"]
 texture = SubResource("CompressedTexture2D_hgo6h")
@@ -19484,7 +19475,6 @@ texture = SubResource("CompressedTexture2D_hgo6h")
 7:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 0.5625, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jq848"]
-load_path = "res://.godot/imported/Ground_07.png-6c480c76fad2b771b368453dd534c774.ctex"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3ke3m"]
 texture = SubResource("CompressedTexture2D_jq848")
@@ -19746,7 +19736,6 @@ texture = SubResource("CompressedTexture2D_jq848")
 6:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 0.5625, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_d4uu0"]
-load_path = "res://.godot/imported/Ground_08.png-03f192683361141fa31179d42e14b5a0.ctex"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6v52o"]
 texture = SubResource("CompressedTexture2D_d4uu0")
@@ -19988,7 +19977,6 @@ texture = SubResource("CompressedTexture2D_d4uu0")
 7:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 0.5625, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ikt76"]
-load_path = "res://.godot/imported/Ground_09.png-c7a08dd392c2953fcad22816374f0242.ctex"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2x23w"]
 texture = SubResource("CompressedTexture2D_ikt76")
@@ -20186,7 +20174,6 @@ texture = SubResource("CompressedTexture2D_ikt76")
 1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 0.5625, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wasim"]
-load_path = "res://.godot/imported/Ground_10.png-94267979f1886fde60750bd713da4d78.ctex"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kgat5"]
 texture = SubResource("CompressedTexture2D_wasim")

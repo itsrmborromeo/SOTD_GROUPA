@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 
 const SPEED = 220.0
-const JUMPFORCE = -298.0
+const JUMPFORCE = -300.0
 @onready var sprite = $AnimatedSprite2D
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -48,10 +48,3 @@ func _physics_process(delta):
 
 	move_and_slide()
 
-<<<<<<< HEAD:Samurai of the Damned/character.gd
-=======
-
-
-
-
->>>>>>> 6d42bc6aed3839c055b46b2621718d692128e2df:Samurai of the Damned/scripts/character.gd
