@@ -48,3 +48,8 @@ func _physics_process(delta):
 
 	move_and_slide()
 
+
+
+func _on_hurtbox_body_entered(body : Node2D):
+	if(body.is_in_group("enemies")):
+		print("Enemy entered")
