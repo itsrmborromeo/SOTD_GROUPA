@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ckamuvl0ip7nk" path="res://assets/art/Stage3_level2_art/tileset.png" id="21_b56aq"]
 [ext_resource type="Texture2D" uid="uid://chuq2ycxrb3r6" path="res://assets/art/Stage3_level2_art/props/houses.png" id="22_kmpfe"]
 [ext_resource type="Texture2D" uid="uid://bmbu66ps2crsp" path="res://assets/art/Stage3_level2_art/props/props.png" id="23_a477e"]
-[ext_resource type="PackedScene" uid="uid://btbckux2gqeru" path="res://scenes/character.tscn" id="52_xcf68"]
+[ext_resource type="PackedScene" uid="uid://btbckux2gqeru" path="res://scenes/characters/character.tscn" id="52_xcf68"]
 [ext_resource type="Texture2D" uid="uid://najgy7n65jnk" path="res://assets/art/Stage3_level2_art/background.png" id="53_yqp8j"]
 [ext_resource type="Texture2D" uid="uid://b11fskifct4so" path="res://assets/art/Stage3_level2_art/middleground.png" id="57_n28l6"]
 
@@ -2985,7 +2985,7 @@ scale = Vector2(2, 2)
 disable_mode = 2
 platform_wall_layers = 1
 
-[node name="Camera2D" type="Camera2D" parent="TileMap/Jinbei"]
+[node name="Camera2D2" type="Camera2D" parent="TileMap/Jinbei"]
 position = Vector2(224, -64)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]

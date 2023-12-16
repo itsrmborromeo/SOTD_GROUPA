@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://btbckux2gqeru"]
+[gd_scene load_steps=59 format=3 uid="uid://btbckux2gqeru"]
 
 [ext_resource type="Script" path="res://scripts/character.gd" id="1_t6mbp"]
 [ext_resource type="Texture2D" uid="uid://bc80x0a75s4nj" path="res://assets/art/maincharacter/Sprites/Idle.png" id="45_0yh3o"]
@@ -208,7 +208,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"attack1",
-"speed": 5.0
+"speed": 3.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -243,8 +243,8 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_wggaf")
 }],
-"loop": true,
-"name": &"attack3",
+"loop": false,
+"name": &"attacks",
 "speed": 5.0
 }, {
 "frames": [{
@@ -378,18 +378,33 @@ animations = [{
 radius = 13.0
 height = 70.0
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fyshn"]
+radius = 15.0
+height = 70.0
+
 [node name="player" type="CharacterBody2D"]
 position = Vector2(1, 0)
+slide_on_ceiling = false
 script = ExtResource("1_t6mbp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_luhao")
-animation = &"jump"
+animation = &"attacks"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_g0eqg")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(1.2, 1.2)
+
+[node name="Hurtbox" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+shape = SubResource("CapsuleShape2D_fyshn")
+debug_color = Color(0.803922, 0.286275, 0.101961, 0.517647)
+
+[connection signal="body_entered" from="Hurtbox" to="." method="_on_hurtbox_body_entered"]
