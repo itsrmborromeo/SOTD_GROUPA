@@ -4,11 +4,11 @@ extends CharacterBody2D
 
 const gravity = 1000
 
-const dalagan = 200
+const dalagan = 300
 
 @export var max_horizontal_speed: int = 300
 
-@export var slow_down_speed: int = 3000
+@export var slow_down_speed: int = 2000
 
 @export var jump: int = -450
 
