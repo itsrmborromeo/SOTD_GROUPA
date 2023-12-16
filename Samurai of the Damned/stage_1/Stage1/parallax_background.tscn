@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://h2tpb4651b4s"]
 
-[ext_resource type="Texture2D" uid="uid://c2ex2t5ob4fub" path="res://assets/art/tilemaps/stage1/PNG/sky.png" id="1_oa27m"]
-[ext_resource type="Texture2D" uid="uid://bqkous6ag7g5u" path="res://assets/art/tilemaps/stage1/PNG/clouds.png" id="2_ck2oi"]
-[ext_resource type="Texture2D" uid="uid://b777gu6tbak12" path="res://assets/art/tilemaps/stage1/PNG/sea.png" id="3_sf8ns"]
-[ext_resource type="Texture2D" uid="uid://cobg8oesyb6v2" path="res://assets/art/tilemaps/stage1/PNG/far-grounds.png" id="4_j85v8"]
+[ext_resource type="Texture2D" uid="uid://c2ex2t5ob4fub" path="res://stage_1/tilemap/sky.png" id="1_oa27m"]
+[ext_resource type="Texture2D" uid="uid://bqkous6ag7g5u" path="res://stage_1/tilemap/clouds.png" id="2_ck2oi"]
+[ext_resource type="Texture2D" uid="uid://b777gu6tbak12" path="res://stage_1/tilemap/sea.png" id="3_sf8ns"]
+[ext_resource type="Texture2D" uid="uid://cobg8oesyb6v2" path="res://stage_1/tilemap/far-grounds.png" id="4_j85v8"]
 
 [node name="ParallaxBackground" type="ParallaxBackground"]
 
@@ -23,7 +23,7 @@ stretch_mode = 1
 
 [node name="clouds" type="ParallaxLayer" parent="."]
 position = Vector2(0, 50)
-motion_scale = Vector2(0.2, 0)
+motion_scale = Vector2(0.3, 0)
 motion_mirroring = Vector2(1088, 0)
 
 [node name="TextureRect" type="TextureRect" parent="clouds"]
@@ -40,9 +40,10 @@ motion_scale = Vector2(0.4, 1)
 motion_mirroring = Vector2(1120, 0)
 
 [node name="TextureRect" type="TextureRect" parent="sea"]
-offset_top = 454.0
-offset_right = 1120.0
-offset_bottom = 554.0
+offset_left = 3.0
+offset_top = 507.0
+offset_right = 1123.0
+offset_bottom = 607.625
 scale = Vector2(2, 2)
 texture = ExtResource("3_sf8ns")
 stretch_mode = 1

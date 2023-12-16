@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2ex2t5ob4fub"
-path="res://.godot/imported/sky.png-987a8a31a673304e8824f27f3caf4b97.ctex"
+uid="uid://dlaimkn3gt3cs"
+path="res://.godot/imported/TX Village Props.png-3629c8bbfb2b099c69bb99442a5c9b92.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/tilemaps/stage1/PNG/sky.png"
-dest_files=["res://.godot/imported/sky.png-987a8a31a673304e8824f27f3caf4b97.ctex"]
+source_file="res://stage_1/tilemap/TX Village Props.png"
+dest_files=["res://.godot/imported/TX Village Props.png-3629c8bbfb2b099c69bb99442a5c9b92.ctex"]
 
 [params]
 

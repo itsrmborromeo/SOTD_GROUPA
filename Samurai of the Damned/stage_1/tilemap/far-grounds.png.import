@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b777gu6tbak12"
-path="res://.godot/imported/sea.png-4bb736d99ed8758533487f9e159dd804.ctex"
+uid="uid://cobg8oesyb6v2"
+path="res://.godot/imported/far-grounds.png-e4b77c9e0e0413c2726dd83b8a2951b5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/tilemaps/stage1/PNG/sea.png"
-dest_files=["res://.godot/imported/sea.png-4bb736d99ed8758533487f9e159dd804.ctex"]
+source_file="res://stage_1/tilemap/far-grounds.png"
+dest_files=["res://.godot/imported/far-grounds.png-e4b77c9e0e0413c2726dd83b8a2951b5.ctex"]
 
 [params]
 

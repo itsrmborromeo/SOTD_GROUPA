@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxd5724m1qoo2"
-path="res://.godot/imported/coverbg.png-1243647541da93dfaf2c536e5782ecf5.ctex"
+uid="uid://sebaqy0xesvn"
+path="res://.godot/imported/cutscen1_bg.jpg-28a701f007a56b8fabc8e2b92237177d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/tilemaps/coverbg.png"
-dest_files=["res://.godot/imported/coverbg.png-1243647541da93dfaf2c536e5782ecf5.ctex"]
+source_file="res://ui/cutscenes/cutscen1_bg.jpg"
+dest_files=["res://.godot/imported/cutscen1_bg.jpg-28a701f007a56b8fabc8e2b92237177d.ctex"]
 
 [params]
 
