@@ -4,9 +4,9 @@ extends NodeState
 @export var collision_shape_2d : CollisionShape2D
 @export var ray_cast_2d : RayCast2D
 @export var speed : int 
-@export var size : int = 24
+@export var size : int = 20
 var direction = -1
-var player : CharacterBody2D 
+var player : CharacterBody2D
 var has_floor = true
 func on_process(delta:float):
 	pass
@@ -30,6 +30,5 @@ func on_physics_process(delta:float):
 func enter():
 	player = get_tree().get_nodes_in_group("Player")[0] as CharacterBody2D
 	ray_cast_2d.position.x = size * direction
-	ray_cast_2d.enabled = true
 func exit():
-	ray_cast_2d.enabled = false
+	pass

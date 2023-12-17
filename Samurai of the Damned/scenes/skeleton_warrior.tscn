@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://c8ufjrbqw853o"]
 
-[ext_resource type="Texture2D" uid="uid://b8dhq4582yoty" path="res://assets/art/mobs/skeleton_warrior/Idle.png" id="1_mopci"]
+[ext_resource type="Texture2D" uid="uid://b8dhq4582yoty" path="res://Anton/mobs/sw/skeleton_warrior/Idle.png" id="1_mopci"]
 [ext_resource type="Script" path="res://scripts/skeleton_warrior.gd" id="1_s2qnd"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_37vmo"]

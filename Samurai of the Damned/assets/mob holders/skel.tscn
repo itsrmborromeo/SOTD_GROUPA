@@ -1,12 +1,12 @@
 [gd_scene load_steps=25 format=3 uid="uid://tbg3uqnr7pg5"]
 
-[ext_resource type="Texture2D" uid="uid://b8dhq4582yoty" path="res://assets/art/mobs/skeleton_warrior/Idle.png" id="1_e2ehr"]
-[ext_resource type="Script" path="res://scenes/enemy ai.gd" id="1_tc4td"]
-[ext_resource type="Texture2D" uid="uid://c66xbci7xp3nu" path="res://assets/art/mobs/skeleton_warrior/Walk.png" id="2_8dbhs"]
-[ext_resource type="Script" path="res://scenes/gravity.gd" id="3_iprig"]
+[ext_resource type="Texture2D" uid="uid://b8dhq4582yoty" path="res://Anton/mobs/sw/skeleton_warrior/Idle.png" id="1_e2ehr"]
+[ext_resource type="Script" path="res://Anton/statesAndBehaviors/enemy ai.gd" id="1_tc4td"]
+[ext_resource type="Texture2D" uid="uid://c66xbci7xp3nu" path="res://Anton/mobs/sw/skeleton_warrior/Walk.png" id="2_8dbhs"]
+[ext_resource type="Script" path="res://Anton/statesAndBehaviors/gravity.gd" id="3_iprig"]
 [ext_resource type="Script" path="res://scenes/mobs/statemachine/statemachine.gd" id="5_4vr8o"]
-[ext_resource type="Script" path="res://scenes/idlestate.gd" id="6_butft"]
-[ext_resource type="Script" path="res://scenes/chasestate.gd" id="7_q4sak"]
+[ext_resource type="Script" path="res://Anton/statesAndBehaviors/idlestate.gd" id="6_butft"]
+[ext_resource type="Script" path="res://Anton/statesAndBehaviors/chasestate.gd" id="7_q4sak"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vdk6j"]
 atlas = ExtResource("1_e2ehr")
