@@ -1,9 +1,9 @@
 [gd_scene load_steps=10 format=3 uid="uid://brp2pqlpwk0ml"]
 
-[ext_resource type="Texture2D" uid="uid://ckk7foodibk4n" path="res://assets/art/tilemaps/stage1/PNG/tileset.png" id="1_oag8u"]
+[ext_resource type="Texture2D" uid="uid://ckk7foodibk4n" path="res://stage_1/tilemap/tileset.png" id="1_oag8u"]
 [ext_resource type="PackedScene" uid="uid://btbckux2gqeru" path="res://scenes/character.tscn" id="2_d1eqw"]
-[ext_resource type="Texture2D" uid="uid://dlaimkn3gt3cs" path="res://assets/art/objects/TX Village Props.png" id="2_f4jf6"]
-[ext_resource type="PackedScene" uid="uid://h2tpb4651b4s" path="res://scenes/Stage1/parallax_background.tscn" id="3_eykg6"]
+[ext_resource type="Texture2D" uid="uid://dlaimkn3gt3cs" path="res://stage_1/tilemap/TX Village Props.png" id="2_f4jf6"]
+[ext_resource type="PackedScene" uid="uid://h2tpb4651b4s" path="res://stage_1/Stage1/parallax_background.tscn" id="3_eykg6"]
 [ext_resource type="PackedScene" uid="uid://cgj7sbh6xg7u1" path="res://scenes/skeleton_spearman.tscn" id="4_lmb7n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ourl6"]
