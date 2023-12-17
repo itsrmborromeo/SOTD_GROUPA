@@ -72,6 +72,8 @@ attacks={
 2d_physics/layer_3="enemies"
 2d_physics/layer_4="fallzone"
 2d_physics/layer_5="items"
+2d_physics/layer_6="hurt box"
+2d_physics/layer_7="attack box"
 
 [physics]
 
