@@ -5,8 +5,10 @@ var has_sight = true
 @onready var player = get_parent().get_node("Jinbei")
 var can_attack = true
 var attack_range = false
+
 var alive = true
 var attacking = false
+var dead_clear = false
 @export var attack_cooldown : Timer
 func _on_sight_body_entered(body : Node2D):
 	if body.is_in_group("Player"):
@@ -40,6 +42,9 @@ func _physics_process(delta):
 			pass
 	else:
 		node_finite_state_machine.transition_to("dead")
+		if dead_clear:
+			queue_free()
+		
 		
 func sightCheck():
 	if player_in_range:
@@ -54,8 +59,6 @@ func sightCheck():
 			else:
 				has_sight = false
 				#print("Player in sight",has_sight)
-
-
 func _on_attack__range_body_entered(body):
 	if body.is_in_group("Player"):
 		attack_range = true
@@ -69,4 +72,10 @@ func _on_attack_cooldown_timeout():
 
 
 func _on_skeleton_warrior_animation_finished():
-	attacking = false # Replace with function body.
+	attacking = false 
+	if alive == false:
+		$"Statemachine/dead/Clear up".start()
+
+
+func _on_clear_up_timeout():
+	dead_clear = true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://b22j0sg6vmlb8"]
+[gd_scene load_steps=54 format=3 uid="uid://b22j0sg6vmlb8"]
 
 [ext_resource type="Script" path="res://Anton/mobs/sw/Skeleton_Warrior.gd" id="1_dg1ui"]
 [ext_resource type="Texture2D" uid="uid://wjnhedfc1dgl" path="res://Anton/mobs/sw/skeleton_warrior/Attack_1.png" id="1_w0rp3"]
@@ -12,7 +12,8 @@
 [ext_resource type="Script" path="res://Anton/statesAndBehaviors/idlestate.gd" id="6_th586"]
 [ext_resource type="Texture2D" uid="uid://c66xbci7xp3nu" path="res://Anton/mobs/sw/skeleton_warrior/Walk.png" id="7_2xwc2"]
 [ext_resource type="Script" path="res://Anton/statesAndBehaviors/melee_attack_state.gd" id="7_ojip7"]
-[ext_resource type="Script" path="res://Anton/mobs/sw/Strikezone.gd" id="8_17cqn"]
+[ext_resource type="Script" path="res://Anton/statesAndBehaviors/Strikezone.gd" id="8_biq31"]
+[ext_resource type="Script" path="res://Anton/statesAndBehaviors/dead_state.gd" id="14_85ggf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gfou8"]
 atlas = ExtResource("1_w0rp3")
@@ -295,7 +296,7 @@ radius = 183.788
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4d1hy"]
 size = Vector2(88, 68)
 
-[node name="Skeleton_Warrior" type="CharacterBody2D" node_paths=PackedStringArray("node_finite_state_machine", "attack_cooldown") groups=["Enemy"]]
+[node name="Skeleton_Warrior" type="CharacterBody2D" node_paths=PackedStringArray("node_finite_state_machine", "attack_cooldown")]
 collision_layer = 4
 script = ExtResource("1_dg1ui")
 node_finite_state_machine = NodePath("Statemachine")
@@ -305,7 +306,7 @@ attack_cooldown = NodePath("Attack cooldown")
 texture_filter = 1
 position = Vector2(2, -32)
 sprite_frames = SubResource("SpriteFrames_8vo5b")
-animation = &"attack_1"
+animation = &"dead"
 
 [node name="Body" type="CollisionShape2D" parent="."]
 position = Vector2(0, 3)
@@ -321,13 +322,13 @@ position = Vector2(0, 3)
 shape = SubResource("CapsuleShape2D_heoe4")
 debug_color = Color(0.917647, 0.117647, 0.647059, 0.419608)
 
-[node name="Strikezone" type="Area2D" parent="."]
-collision_layer = 64
-collision_mask = 64
+[node name="Strikezone" type="Area2D" parent="." groups=["Enemy"]]
+collision_layer = 96
+collision_mask = 96
 input_pickable = false
-script = ExtResource("8_17cqn")
-damage_amount = 1
-health_amount = 3
+script = ExtResource("8_biq31")
+damage_amount = 5
+health_amount = 4
 
 [node name="Attack" type="CollisionShape2D" parent="Strikezone"]
 position = Vector2(0, 5.5)
@@ -368,12 +369,13 @@ animated_sprite_2d = NodePath("../../Skeleton Warrior")
 ray_cast_2d = NodePath("../../RayCast2D")
 speed = 100
 
-[node name="Attack" type="Node" parent="Statemachine" node_paths=PackedStringArray("character_body_2d", "animated_sprite_2d", "strike_zone")]
+[node name="Attack" type="Node" parent="Statemachine" node_paths=PackedStringArray("character_body_2d", "animated_sprite_2d", "strike_zone", "strike", "hit_zone")]
 script = ExtResource("7_ojip7")
 character_body_2d = NodePath("../..")
 animated_sprite_2d = NodePath("../../Skeleton Warrior")
 strike_zone = NodePath("../../Strikezone")
-loc = 30
+strike = NodePath("../../Strikezone/Attack")
+hit_zone = NodePath("../../Hitzone")
 
 [node name="Combo timer" type="Timer" parent="Statemachine/Attack"]
 wait_time = 3.0
@@ -385,17 +387,24 @@ character_body_2d = NodePath("../..")
 animated_sprite_2d = NodePath("../../Skeleton Warrior")
 
 [node name="dead" type="Node" parent="Statemachine"]
+script = ExtResource("14_85ggf")
 
 [node name="Clear up" type="Timer" parent="Statemachine/dead"]
+wait_time = 2.0
+one_shot = true
 
 [node name="Attack cooldown" type="Timer" parent="."]
 wait_time = 2.0
 one_shot = true
 
+[node name="Hitzone" type="Marker2D" parent="."]
+
 [connection signal="animation_finished" from="Skeleton Warrior" to="." method="_on_skeleton_warrior_animation_finished"]
+[connection signal="animation_finished" from="Skeleton Warrior" to="Statemachine/Attack" method="_on_skeleton_warrior_animation_finished"]
 [connection signal="body_entered" from="Sight" to="." method="_on_sight_body_entered"]
 [connection signal="body_exited" from="Sight" to="." method="_on_sight_body_exited"]
 [connection signal="body_entered" from="attack _range" to="." method="_on_attack__range_body_entered"]
 [connection signal="body_exited" from="attack _range" to="." method="_on_attack__range_body_exited"]
 [connection signal="timeout" from="Statemachine/Attack/Combo timer" to="Statemachine/Attack" method="_on_combo_timer_timeout"]
+[connection signal="timeout" from="Statemachine/dead/Clear up" to="." method="_on_clear_up_timeout"]
 [connection signal="timeout" from="Attack cooldown" to="." method="_on_attack_cooldown_timeout"]

@@ -156,6 +156,6 @@ func input_movement():
 	
 
 
-func _on_hurtbox_body_entered(body):
-	if body.is_in_group("Enemy"):
+func _on_hurtbox_area_entered(area):
+	if area.is_in_group("Enemy"):
 		print("nay kuntra")
