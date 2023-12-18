@@ -243,8 +243,8 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_wggaf")
 }],
-"loop": true,
-"name": &"attack3",
+"loop": false,
+"name": &"attacks",
 "speed": 5.0
 }, {
 "frames": [{
@@ -382,34 +382,24 @@ height = 70.0
 radius = 15.0
 height = 70.0
 
-[node name="player" type="CharacterBody2D"]
+[node name="player" type="CharacterBody2D" groups=["Player"]]
 position = Vector2(1, 0)
+collision_layer = 2
+slide_on_ceiling = false
 script = ExtResource("1_t6mbp")
-metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(-10, 2)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_luhao")
-animation = &"jump"
+animation = &"attacks"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_g0eqg")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(-2, -1)
-zoom = Vector2(1.2, 1.2)
-editor_draw_limits = true
-
 [node name="Hurtbox" type="Area2D" parent="."]
-<<<<<<< Updated upstream
-collision_layer = 2
-collision_mask = 4
-=======
 collision_layer = 96
 collision_mask = 96
->>>>>>> Stashed changes
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
 shape = SubResource("CapsuleShape2D_fyshn")
