@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://c2gkt5y73svxu" path="res://assets/art/Jeralyn Files/Stage3_level1&2_art/Platformer/Ground_11.png" id="9_wtqxn"]
 [ext_resource type="Texture2D" uid="uid://ix6ustsm15pl" path="res://assets/art/Jeralyn Files/Stage3_level1&2_art/Platformer/Ground_05.png" id="10_7sgms"]
 [ext_resource type="Texture2D" uid="uid://cnrj0uu73bg4d" path="res://assets/art/Jeralyn Files/Stage3_level1&2_art/Village/TILEMAP12-removebg-preview.png" id="11_g7dtr"]
-[ext_resource type="Texture2D" uid="uid://bqtgrpncm0ug7" path="res://stage_2/tilemaps/level2/Tiles.png" id="12_ehwb3"]
+[ext_resource type="Texture2D" uid="uid://bqtgrpncm0ug7" path="res://assets/art/tilemaps/Tiles.png" id="12_ehwb3"]
 [ext_resource type="Texture2D" uid="uid://binhjh8ccf4to" path="res://assets/art/Jeralyn Files/Stage3_level1&2_art/Platformer/Ground_06.png" id="13_nph7s"]
 [ext_resource type="Texture2D" uid="uid://6iqaqi5x3gx6" path="res://assets/art/Jeralyn Files/Stage3_level1&2_art/Platformer/Ground_01.png" id="14_ec0jy"]
 [ext_resource type="Texture2D" uid="uid://cbyjv5iewvfgp" path="res://assets/art/Jeralyn Files/Stage3_level1&2_art/Village/TILEMAP5-removebg-preview.png" id="15_ewp5e"]
