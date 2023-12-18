@@ -12,17 +12,17 @@ func _ready():
 	
 func on_player_health_changed(player_current_health : int):
 	if player_current_health == 3:
-		heart_3.texture = heart1
+		heart_3.texture == heart1
 	elif player_current_health < 3:
-		heart_3.texture = heart0
+		heart_3.texture == heart0
 		
 	if player_current_health == 2:
-		heart_2.texture = heart1
+		heart_2.texture == heart1
 	elif player_current_health < 2:
-		heart_2.texture = heart0
+		heart_2.texture == heart0
 		
 	if player_current_health == 1:
-		heart_3.texture = heart1
+		heart_3.texture == heart1
 	elif player_current_health < 1:
-		heart_3.texture = heart0
+		heart_3.texture == heart0
 	

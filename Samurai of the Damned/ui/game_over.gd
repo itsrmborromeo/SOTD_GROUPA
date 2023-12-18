@@ -2,7 +2,7 @@ extends Control
 
 
 func _on_yes_pressed():
-	pass # Replace with function body.
+	GameManager.start_game()
 
 
 func _on_no_pressed():
