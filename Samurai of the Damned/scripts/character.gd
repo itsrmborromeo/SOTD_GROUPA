@@ -1,161 +1,68 @@
 extends CharacterBody2D
 
-@onready var animated_sprite_2d = $AnimatedSprite2D
 
-const gravity = 1000
+const SPEED = 220.0
+const JUMPFORCE = -300.0
+@onready var sprite = $AnimatedSprite2D
 
-const dalagan = 200
+# Get the gravity from the project settings to be synced with RigidBody nodes.
+var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
-@export var max_horizontal_speed: int = 300
 
-@export var slow_down_speed: int = 3000
+func _physics_process (_delta):
+	# Add the gravity.
+	if not is_on_floor():
+		velocity.y += gravity * _delta
+		$AnimatedSprite2D.play("jump")
 
-@export var jump: int = -450
+	# Handle Jump.
+	if Input.is_action_just_pressed("jump") and is_on_floor():
+		velocity.y = JUMPFORCE
 
-@export var jump_horizontal_speed: int = 1000
 
-@export var max_jump_horizontal_speed: int = 300
-
-@export var jump_count: int = 1
-
-enum State { barog, dagan, layat, tagak, Hapak }
-
-var current_state
-
-var current_jump_count: int
-
-var attack_cooldown: float = 0.5  # Adjust the cooldown time as needed
-
-var time_since_last_attack: float = 0.0
-
-func _ready():
 	
-	current_state = State.barog
-
-func _physics_process(delta):
-	
-	player_falling(delta)
-	
-	player_idle(delta)
-	
-	player_run(delta)
-	
-	player_jump(delta)
-	
-	player_attack(delta) 
-	
-	move_and_slide()
-	
-	player_animations()
-
-func player_falling(delta):
-	
-	if !is_on_floor():
-		
-		velocity.y += gravity * delta
-		
-		if velocity.y > 0:
+	# Get the input direction and handle the movement/deceleration.
+	# As good practice, you should replace UI actions with custom gameplay actions.
+	var direction = Input.get_axis("left", "right")
+	if Input.is_action_pressed("right"):
+		velocity.x = direction * SPEED
+		$AnimatedSprite2D.play("run")
 			
-			current_state = State.tagak
-
-func player_idle(delta):
-	
-	if is_on_floor():
-		
-		current_state = State.barog
-
-func player_run(delta : float):
-	
-	if !is_on_floor():
-		
-		return
-	
-	var direction = input_movement()
-	
-	if direction:
-		
-		velocity.x += direction * dalagan * delta
-		
-		velocity.x = clamp(velocity.x, -max_horizontal_speed, max_horizontal_speed)
+	elif Input.is_action_pressed("left"):
+		velocity.x = -direction * -SPEED
+		$AnimatedSprite2D.play("run")
 		
 	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+		$AnimatedSprite2D.play("idle")
 		
-		velocity.x = move_toward(velocity.x, 0, slow_down_speed * delta)
+	if not is_on_floor():
+		$AnimatedSprite2D.play("jump")
 	
-	if direction != 0:
+	if(direction != 0):
+		sprite.flip_h = (direction == -1)
 		
-		current_state = State.dagan
 		
-		animated_sprite_2d.flip_h = false if direction > 0 else true
+	if Input.is_action_pressed("attack1"):
+		$AnimatedSprite2D.play("attack1")
 
-func player_jump(delta: float):
-	
-	var jump_input: bool = Input.is_action_just_pressed("jump")
-	
-	if is_on_floor() and jump_input:
-		
-		current_jump_count = 0
-		
-		velocity.y = jump
-		
-		current_jump_count += 1
-		
-		current_state = State.layat
-	
-	if !is_on_floor() and jump_input and current_jump_count < jump_count:
-		
-		velocity.y = jump
-		
-		current_jump_count += 1
-		
-		current_state = State.layat
-	
-	if !is_on_floor() and current_state == State.layat:
-		
-		var direction = input_movement()
-		
-		velocity.x += direction * jump_horizontal_speed * delta
-		
-		velocity.x = clamp(velocity.x, -max_jump_horizontal_speed, max_jump_horizontal_speed)
+	move_and_slide()
 
-func player_attack(delta):
-	
-	if Input.is_action_just_pressed("attacks"):
-		
-		current_state = State.Hapak
-		
-		print("Attacking!")
+var entered = false
 
-func player_animations():
-	
-	if current_state == State.barog and animated_sprite_2d.animation != "attacks":
-		
-		animated_sprite_2d.play("idle")
-		
-	elif current_state == State.dagan:
-		
-		animated_sprite_2d.play("run")
-		
-	elif current_state == State.layat:
-		
-		animated_sprite_2d.play("jump")
-		
-	elif current_state == State.tagak:
-		
-		animated_sprite_2d.play("fall")
-		
-	elif current_state == State.Hapak:
-		
-		animated_sprite_2d.play("attacks")
-
-func input_movement():
-	
-	var direction : float = Input.get_axis("ui_left", "ui_right")
-	
-	return direction
-	
+func _on_hurtbox_body_entered(body : PhysicsBody2D):
+	if(body.is_in_group("enemies")):
+		print("Enemy entered")
 
 
-func _on_hurtbox_area_entered(area):
-	if area.is_in_group("Enemy"):
-		print("nay kuntra")
+func _on_area_2d_body_entered(body):
+	entered = true
+
+
+func _on_area_2d_body_exited(body):
+	entered = false
+	
+func _process(delta):
+	if entered == true: 
+		if Input.is_action_just_pressed("ui_accept"):
+			get_tree().change_scene_to_file("res://scenes/Stage2/level_2.tscn")
